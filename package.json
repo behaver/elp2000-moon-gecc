@@ -1,0 +1,36 @@
+{
+  "name": "@behaver/elp2000-mooon-gecc",
+  "version": "1.0.0",
+  "description": "This pkg is calculator for moon geocentric ecliptic coordinate by using ELP2000 theory.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behaver/elp2000-moon-gecc.git"
+  },
+  "keywords": [
+    "moon",
+    "elp2000"
+  ],
+  "author": "Sanwan, Dong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/behaver/elp2000-moon-gecc/issues"
+  },
+  "homepage": "https://github.com/behaver/elp2000-moon-gecc#readme",
+  "devDependencies": {
+    "@behaver/celestial-coordinate": "^1.4.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.1"
+  },
+  "dependencies": {
+    "@behaver/angle": "^2.0.2",
+    "@behaver/coordinate": "^3.3.0",
+    "@behaver/jdate": "^2.3.0"
+  }
+}
