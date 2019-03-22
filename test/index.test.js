@@ -4,7 +4,7 @@ const expect = require("chai").expect;
 const { JDateRepository } = require('@behaver/jdate');
 const ELP2000MoonGECC = require('../index');
 const { SphericalCoordinate3D } = require('@behaver/coordinate/3d');
-const { EclipticCoordinate } = require('@behaver/celestial-coordinate');
+const { EclipticCoordinate, SystemSwitcher  } = require('@behaver/celestial-coordinate');
 const Angle = require('@behaver/angle');
 const angle = new Angle;
 
@@ -240,8 +240,10 @@ describe('#ELP2000MoonGECC', () => {
 
       expect(ECC.l.inRound().getDegrees()).to.closeTo(133.167269, 0.0003);
 
+      let SS = new SystemSwitcher(ECC);
+
       // 地心视赤道坐标检验
-      let EQC = ECC.toEquinoctial();
+      let EQC = SS.to('eqc');
 
       expect(angle.setRadian(EQC.sc.phi).inRound().getDegrees()).to.closeTo(angle.parseHACString('8h 58m 45.1s').getDegrees(), 0.0003);
       expect(angle.setRadian(Math.PI / 2 - EQC.sc.theta).inRound(-90).getDegrees()).to.closeTo(13.768366, 0.0002);

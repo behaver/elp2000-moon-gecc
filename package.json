@@ -1,7 +1,7 @@
 {
   "name": "@behaver/elp2000-mooon-gecc",
   "version": "1.0.0",
-  "description": "This pkg is calculator for moon geocentric ecliptic coordinate by using ELP2000 theory.",
+  "description": "This pkg is a calculator for moon geocentric ecliptic coordinate by using ELP2000 theory.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/behaver/elp2000-moon-gecc#readme",
   "devDependencies": {
-    "@behaver/celestial-coordinate": "^1.4.0",
+    "@behaver/celestial-coordinate": "^1.5.1",
     "chai": "^4.2.0",
-    "mocha": "^6.0.1"
+    "mocha": "^6.0.2"
   },
   "dependencies": {
     "@behaver/angle": "^2.0.2",
-    "@behaver/coordinate": "^3.3.0",
+    "@behaver/coordinate": "^3.3.1",
     "@behaver/jdate": "^2.3.0"
   }
 }
