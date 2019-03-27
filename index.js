@@ -101,7 +101,7 @@ class ELP2000MoonGECC {
    * @return {SphericalCoordinate3D} 月球地心黄道球坐标
    */
   get sc() {
-    return new SphericalCoordinate3D(this.r / 1.49597870691e8, Math.PI / 2 - this.b.inRound(-90, 'd').getRadian(), this.l.inRound().getRadian());
+    return new SphericalCoordinate3D(this.r / 1.49597870691e8, Math.PI / 2 - this.b.getRadian(), this.l.getRadian());
   }
 
   /**

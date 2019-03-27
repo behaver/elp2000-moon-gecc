@@ -1,5 +1,5 @@
 {
-  "name": "@behaver/elp2000-mooon-gecc",
+  "name": "@behaver/elp2000-moon-gecc",
   "version": "1.0.2",
   "description": "This pkg is a calculator for moon geocentric ecliptic coordinate by using ELP2000 theory.",
   "main": "index.js",
