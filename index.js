@@ -54,7 +54,7 @@ class ELP2000MoonGECC {
 
       // 对公元 3000 年至公元 5000 年的拟合, 最大误差小于10角秒
       if (this.private.jdate.JDEC > 10) {
-        let tx = this.private.jdate.JDEC,
+        let tx = this.private.jdate.JDEC - 10,
             tx2 = tx * tx;
         l += (new Angle).setSeconds(-0.866 + 1.43 * tx + 0.054 * tx2).getRadian();
       }
@@ -147,7 +147,7 @@ class ELP2000MoonGECC {
    */
   get longitudePrecessionCorrection() {
     if (!this.cache.has('longitudePrecessionCorrection')) {
-      let data = [ 5028.792262, 1.1124406, 0.00007699, 0.000023479, 0.0000000178 ];
+      let data = [ 5028.792262, 1.1124406, 0.00007699, -0.000023479, -0.0000000178 ];
       let lpc = 0;
       for (var i = 0; i < data.length; i ++) lpc += data[i] * this.private.jdate.JDECP(i + 1);
       this.cache.set('longitudePrecessionCorrection', lpc);
