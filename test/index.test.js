@@ -229,6 +229,7 @@ describe('#ELP2000MoonGECC', () => {
         sc: EC.sc,
         centerMode: 'geocentric',
         epoch: jdate,
+        withNutation: false,
       });
 
       expect(ECC.l.inRound().getDegrees()).to.closeTo(133.162659, 0.0003);
@@ -240,7 +241,9 @@ describe('#ELP2000MoonGECC', () => {
 
       expect(ECC.l.inRound().getDegrees()).to.closeTo(133.167269, 0.0003);
 
-      let SS = new SystemSwitcher(ECC);
+      let SS = new SystemSwitcher({
+        coord: ECC
+      });
 
       // 地心视赤道坐标检验
       let EQC = SS.to('eqc');

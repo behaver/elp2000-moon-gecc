@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/behaver/elp2000-moon-gecc#readme",
   "devDependencies": {
-    "@behaver/celestial-coordinate": "^1.6.0",
+    "@behaver/celestial-coordinate": "^1.8.1",
     "chai": "^4.2.0",
-    "mocha": "^6.0.2"
+    "mocha": "^6.1.4"
   },
   "dependencies": {
     "@behaver/angle": "^2.0.3",
-    "@behaver/coordinate": "^3.3.3",
+    "@behaver/coordinate": "^3.4.0",
     "@behaver/jdate": "^2.3.2"
   },
   "files": [
