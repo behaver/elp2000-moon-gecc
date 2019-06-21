@@ -24,6 +24,7 @@ class ELP2000MoonGECC {
   constructor(jdate) {
 
     this.private = {};
+    jdate = (jdate === undefined) ? new JDateRepository : jdate;
     this.private.jdate = jdate;
     this.cache = new CacheSpaceOnJDate(jdate);
     this.calculator = new ELP2000Calculator(jdate);
